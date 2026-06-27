@@ -1,7 +1,8 @@
 import axios, { type AxiosError } from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "/api/v1",
+  // baseURL: import.meta.env.VITE_API_URL || "/api/v1",
+  baseURL: "https://fms-backend-fudc.onrender.com/api/v1",
   headers: { "Content-Type": "application/json" },
   timeout: 30000,
 });
