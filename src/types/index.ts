@@ -191,7 +191,8 @@ export interface FlightCrewAssignment {
   id: number;
   flight_id: number;
   crew_member_id: number;
-  role: string;
+  role_on_flight: string;
+  assigned_at: string;
   crew_member?: CrewMember;
 }
 

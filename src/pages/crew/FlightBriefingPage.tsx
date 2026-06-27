@@ -62,7 +62,7 @@ export default function FlightBriefingPage() {
   })
 
   // Limited booking summary — backend returns counts only for crew
-  const { data: bookingSummary } = useQuery<BookingSummary>({
+  const { data: bookingSummary } = useQuery<BookingSummary | null>({
     queryKey: ['flight-bookings-summary', flightId],
     queryFn: () =>
       api.get(`/flights/${flightId}/bookings`).then(r => {
